@@ -1,0 +1,24 @@
+#!/bin/bash
+set -ue
+
+# Configure source
+configure=0
+
+while getopts 'c' opt; do
+    case "$opt" in
+        c)
+            configure=1
+            ;;
+    esac
+done
+
+if [ "$configure" -eq 1 ]; then
+    ./auto/configure --with-compat --add-dynamic-module=/opt/persistence-module/
+fi
+
+# Only compile dynamically linked module
+make modules
+
+# Life quality ensurance ;)
+mkdir -p /objs/
+cp -r /opt/nginx-src/objs/* /objs/
