@@ -13,11 +13,11 @@ An Nginx module for persistent malware
 
 3. What can I do with this?
 
-Pretty much use it in Capture The Flag or something, there is a chance no one will notice it. Currently, and no promises made, this is only a module template with a reverse shell from [PayloadAllTheThings Reverse Shell Cheat Sheet](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md#c), if you read the code at [persistence-module/ngx_http_server_module.c](/persistence-module/ngx_http_server_module.c), you will probably agree with me. Now that you understand that, and know how to code C, you can do whatever you want, however you want!
+> Pretty much use it in Capture The Flag or something, there is a chance no one will notice it. Currently, and no promises made, this is only a module template with a reverse shell from [PayloadAllTheThings Reverse Shell Cheat Sheet](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md#c). If you read the code at [persistence-module/ngx_http_server_module.c](/persistence-module/ngx_http_server_module.c), you will probably agree with me. Now that you understand that, and know how to code C, you can do whatever you want, however you want!
 
 # How to run
 
-I should hope you are able to read the code, dear developer, and be encouraged to read it, specially the module source code at persistence-module/ngx_http_server_module.c](/persistence-module/ngx_http_server_module.c). Now that you understand it superficially, you can compile the dynamic module using Docker! Run the following command:
+I should hope you are able to read the code, dear developer, and be encouraged to read it, specially the module source code at [persistence-module/ngx_http_server_module.c](/persistence-module/ngx_http_server_module.c). Now that you understand it superficially, you can compile the dynamic module using Docker! Run the following command:
 
 ```bash
 docker compose run builder
